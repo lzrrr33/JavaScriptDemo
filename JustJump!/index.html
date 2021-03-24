@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>JS飞机大战网页版小游戏 - 源码之家</title>
+
+    <style type="text/css" media="screen">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            border:0;
+        }
+        ol, ul ,li{list-style: none;}
+
+
+        html,body{
+            /* background: url('img/bj.jpg'); */
+            height:100%;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            user-select: none;
+            font-family:sans-serif;
+        }
+        .layout{
+            width:100%;
+            height:100%;
+            margin: 0 auto;
+            background: url('img/background.png') ;
+            /* background:#505149; */
+            position: relative;
+            overflow: hidden;
+
+
+        }
+
+
+
+
+        .mario{
+            width:110px;
+            height:110px;
+            /* background:#fff; */
+            background:url('img/mario1.png') 50% no-repeat;
+            position: absolute;
+            bottom:0;
+            left:15%;
+            top:52%;
+            cursor:pointer;
+            z-index: 500;
+        }
+
+        .stone{
+            width:90px;
+            height:190px;
+            /* background:#fff; */
+            background:url('img/stone1.png') 50% no-repeat;
+            position: absolute;
+            bottom:0;
+            left:100%;
+            top:42%;
+            cursor:pointer;
+        }
+
+        .bird{
+            width:130px;
+            height:100px;
+            /* background:red; */
+            background:url('img/bird1.png') 50% no-repeat;
+            position: absolute;
+            top:10%;
+            left:100%;
+        }
+
+        .score{
+            display: none;
+            padding: 10px 15px;
+            font-size:30px;
+            font-weight:bold;
+            color:#99B2D6;
+            background:#031540;
+            border:5px solid #425579;
+            border-radius:0 50px 50px 0;
+            position: absolute;
+            top:20px;
+            left:20px;
+            z-index:1000000;
+
+            /* background:red; */
+        }
+
+
+        #start{
+            width: 100%;
+            height:100%;
+            background:rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top:0;
+            left:0;
+            z-index: 1000;
+            display: none;
+        }
+        #startBtn{
+            background:blue;
+            color: #fff;
+            font-size:50px;
+            margin:100px 0 0 -115px;
+            padding: 10px 30px;
+            border:5px solid #fff;
+            border-radius:50px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            outline:none;
+            cursor:pointer;
+        }
+        #name-over{
+            font-family:'微软雅黑',sans-serif;
+            width:100%;
+            padding: 120px 0 10px;
+            margin: -200px 0 0 0;
+            font-size:50px;
+            font-weight:bold;
+            text-align:center;
+            color:rgba(106,124,197,1);
+            line-height:70px;
+            background:rgba(106,124,197,0.5) url('img/mario1.png') center 20px no-repeat;
+            position: absolute;
+            top:60%;
+            left:0;
+
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="layout" id="layout"></div>
+
+<!--<div class="score">得分：-->
+<!--    <span id="score">0</span>-->
+<!--</div>-->
+<div id="start">
+    <div id="name-over"><i style="text-align: center">Game over</i></div>
+    <input id="startBtn" type="button" value="RESTART">
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/justjump.js"></script>
+
+
+</div>
+</body>
+</html>
